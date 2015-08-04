@@ -1,6 +1,6 @@
 "use strict";
 define(["bacon","jq-console"], function(Bacon) {
-  var welcomeMessage = "Welcome to Turtle Roy.\nTry this: repeat 360 (sequence[fd 1, lt 1])\nOr try one of the examples below.\n"
+  var welcomeMessage = "Tervetuloa kokeilemaan Turtle Royta.\nKirjoita: repeat 360 (sequence[fd 1, lt 1])\n"
   var promptLabel = 'λ> '
   function fmt(value, className) {
     return {msg: value, className: "jqconsole-" + className};
@@ -9,11 +9,11 @@ define(["bacon","jq-console"], function(Bacon) {
   function fmtValue(value) { return fmt(value, "value"); }
   function fmtType(value) { return fmt(value, "type"); }
   function fmtCommand(value) { return fmt(promptLabel + value, "command"); }
-  function fmtError(value) { 
+  function fmtError(value) {
     if (value.statusText) {
       value = value.statusText
     }
-    return fmt(value, "error"); 
+    return fmt(value, "error");
   }
 
   function init(consoleElement, roy) {
@@ -88,7 +88,7 @@ define(["bacon","jq-console"], function(Bacon) {
         response.onValue(sendToConsole)
         response.errors().mapError(fmtError).onValue(sendToConsole)
         response.onEnd(prompt)
-      })  
+      })
     }
     prompt()
     return {
