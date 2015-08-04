@@ -9,6 +9,7 @@ define(["lodash", "tco", "barrier", "piano", "commands", "speak"], function(_, t
     var all = Bacon.combineAsArray(
       Bacon.fromCallback(royEnv, "evalScript", "script/arrays.roy")
       ,Bacon.fromCallback(royEnv, "evalScript", "script/turtle.roy")
+      ,Bacon.fromCallback(royEnv, "evalScript", "script/hei.roy")
     )
     return { loaded: all.map(true) }
   }
