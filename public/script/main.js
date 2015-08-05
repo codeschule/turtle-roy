@@ -25,7 +25,7 @@ require.config({
   },
   waitSeconds: 60
 })
-require(["lodash", "jquery", "royenv", "royrepl", "turtle", "turtlebundle", "editor", "commands", "cookbook", "storage", "sharing", "cheatsheet", "help"], 
+require(["lodash", "jquery", "royenv", "royrepl", "turtle", "turtlebundle", "editor", "commands", "cookbook", "storage", "sharing", "cheatsheet", "help"],
     function(_, $, RoyEnv, RoyRepl, Turtle, TurtleBundle, Editor, Commands, Cookbook, storage, Sharing) {
   var overhead = 300
   if (window.self !== window.top) {
@@ -33,7 +33,7 @@ require(["lodash", "jquery", "royenv", "royrepl", "turtle", "turtlebundle", "edi
     overhead = 200
   }
   function width() { return $("body").width() }
-  function height() { 
+  function height() {
     return Math.min(width() / 2, $(window).height() - overhead)
   }
 
@@ -58,9 +58,8 @@ require(["lodash", "jquery", "royenv", "royrepl", "turtle", "turtlebundle", "edi
     var turtleId = document.location.search.split("=")[1]
     if (turtleId) storage.open(turtleId)
     element.removeClass("loading")
-    takeFocus()
   })
-  
+
   element.find(".turtlegraphics").clickE().onValue(takeFocus)
 
   element.find(".editor-link").asEventStream("click").onValue(function() {
