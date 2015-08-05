@@ -1,1 +1,0 @@
-let hei = sequence[clear,lt 90, penup, fd 60, lt 90, fd 60, rt 180, pendown, fd 120,rt 180,penup,fd 60,lt 90,pendown,fd 30,lt 90,fd 60,lt 180,penup,fd 60,pendown,fd 60,penup,lt 90,fd 60,lt 180,pendown,fd 30,rt 90,fd 120,rt 90,fd 30,penup,lt 180,fd 30,lt 90,fd 60,lt 90,pendown,fd 30,penup,fd 30,lt 90,pendown,fd 60,lt 180,penup,fd 60,pendown,fd 60]
