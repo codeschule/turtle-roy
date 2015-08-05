@@ -1,6 +1,6 @@
 "use strict";
 define(["bacon","jq-console"], function(Bacon) {
-  var welcomeMessage = "Tervetuloa kokeilemaan Turtle Royta.\nKirjoita: repeat 360 (sequence[fd 1, lt 1])\n"
+  var welcomeMessage = "Tervetuloa kokeilemaan Turtle Royta.\n"
   var promptLabel = 'λ> '
   function fmt(value, className) {
     return {msg: value, className: "jqconsole-" + className};
