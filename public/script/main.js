@@ -58,6 +58,7 @@ require(["lodash", "jquery", "royenv", "royrepl", "turtle", "turtlebundle", "edi
     var turtleId = document.location.search.split("=")[1]
     if (turtleId) storage.open(turtleId)
     element.removeClass("loading")
+    takeFocus()
   })
 
   element.find(".turtlegraphics").clickE().onValue(takeFocus)
